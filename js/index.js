@@ -26,7 +26,7 @@ function makeHoles() {
   video.style.clipPath = 'url(#multiRectClip)';
 }
 
-const events = ['resize', 'load'];
+const events = ['resize', 'load', 'scroll'];
 events.forEach(event => {
   window.addEventListener(event, () => {
     makeHoles();
