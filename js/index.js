@@ -14,15 +14,15 @@ function makeHoles() {
     // Устанавливаем атрибуты rect (с учетом возможной прокрутки страницы)
     const x = window.scrollX + window.scrollX;
     const y = window.scrollY + window.scrollY;
-    // координата X верхнего левого угла
+    // Координата X верхнего левого угла
     rect.setAttribute('x', x);
-    // координата Y верхнего левого угла
+    // Координата Y верхнего левого угла
     rect.setAttribute('y', y);
-    // ширина
+    // Ширина
     rect.setAttribute('width', rectParams.width);
-    // высота
+    // Высота
     rect.setAttribute("height", rectParams.height);
-    // отправляем в clipPath
+    // Отправляем в clipPath
     multiRectClip.appendChild(rect);
   })
   video.style.clipPath = 'url(#multiRectClip)';
