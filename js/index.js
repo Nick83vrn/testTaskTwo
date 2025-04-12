@@ -11,11 +11,13 @@ function makeHoles() {
     // Все элементы наложены друг на друга, координаты можно вычислять относительно viewport
     const rectParams = hole.getBoundingClientRect();
     const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    // Устанавливаем атрибуты rect
+    // Устанавливаем атрибуты rect (с учетом возможной прокрутки страницы)
+    const x = window.scrollX + window.scrollX;
+    const y = window.scrollY + window.scrollY;
     // координата X верхнего левого угла
-    rect.setAttribute('x', rectParams.left);
+    rect.setAttribute('x', x);
     // координата Y верхнего левого угла
-    rect.setAttribute('y', rectParams.top);
+    rect.setAttribute('y', y);
     // ширина
     rect.setAttribute('width', rectParams.width);
     // высота
